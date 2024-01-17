@@ -10,9 +10,12 @@
     "@angular/platform-browser": "^17.0.2",
     "@angular/platform-browser-dynamic": "^17.0.2",
     "@angular/router": "^17.0.2",
+    "@capacitor/android": "^5.6.0",
+    "@capacitor/angular": "^2.0.3",
     "@capacitor/app": "5.0.6",
     "@capacitor/core": "5.6.0",
     "@capacitor/haptics": "5.0.6",
+    "@capacitor/ios": "^5.6.0",
     "@capacitor/keyboard": "5.0.7",
     "@capacitor/status-bar": "5.0.6",
     "@ionic/angular": "^7.5.0",
@@ -29,7 +32,7 @@
     "@angular/cli": "^17.0.0",
     "@angular/compiler-cli": "^17.0.2",
     "@angular/language-service": "^17.0.2",
-    "@capacitor/cli": "5.6.0",
+    "@capacitor/cli": "^5.6.0",
     "@ionic/angular-toolkit": "^9.0.0",
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -79,11 +82,11 @@
       },
       {
         "file": "angular.json",
-        "hash": "10618098369361505948"
+        "hash": "9626936600841370914"
       },
       {
         "file": "capacitor.config.ts",
-        "hash": "8363638867585883955"
+        "hash": "7370524685946020382"
       },
       {
         "file": "ionic.config.json",
@@ -95,11 +98,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "5934836126168891673"
+        "hash": "13934865431999572339"
       },
       {
         "file": "package.json",
-        "hash": "7803500244832271272"
+        "hash": "14825798111181625044"
       },
       {
         "file": "src/app/app.component.html",
@@ -119,23 +122,107 @@
       },
       {
         "file": "src/app/app.routes.ts",
-        "hash": "16595844919700480130"
+        "hash": "16741581596783036829"
       },
       {
-        "file": "src/app/home/home.page.html",
-        "hash": "3668328913015384273"
+        "file": "src/app/component/bulletin-detail/bulletin-detail.component.html",
+        "hash": "3764409892987424594"
       },
       {
-        "file": "src/app/home/home.page.scss",
+        "file": "src/app/component/bulletin-detail/bulletin-detail.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/component/bulletin-detail/bulletin-detail.component.spec.ts",
+        "hash": "4232018923901220617"
+      },
+      {
+        "file": "src/app/component/bulletin-detail/bulletin-detail.component.ts",
+        "hash": "16876273317215655909"
+      },
+      {
+        "file": "src/app/component/bulletin-list/bulletin-list.component.html",
+        "hash": "1565506766114625447"
+      },
+      {
+        "file": "src/app/component/bulletin-list/bulletin-list.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/component/bulletin-list/bulletin-list.component.spec.ts",
+        "hash": "11666956032259057600"
+      },
+      {
+        "file": "src/app/component/bulletin-list/bulletin-list.component.ts",
+        "hash": "15830344327640147370"
+      },
+      {
+        "file": "src/app/component/data.ts",
+        "hash": "9802710763976098311"
+      },
+      {
+        "file": "src/app/component/modal/modal.component.html",
+        "hash": "5538197559908690509"
+      },
+      {
+        "file": "src/app/component/modal/modal.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/component/modal/modal.component.spec.ts",
+        "hash": "11702683789866150134"
+      },
+      {
+        "file": "src/app/component/modal/modal.component.ts",
+        "hash": "13054666118831686529"
+      },
+      {
+        "file": "src/app/component/tabs/tabs.component.html",
+        "hash": "18337073305891964819"
+      },
+      {
+        "file": "src/app/component/tabs/tabs.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/component/tabs/tabs.component.spec.ts",
+        "hash": "39225303418382237"
+      },
+      {
+        "file": "src/app/component/tabs/tabs.component.ts",
+        "hash": "11397331194278403078"
+      },
+      {
+        "file": "src/app/page/bulletin/bulletin.page.html",
+        "hash": "2154745588892305199"
+      },
+      {
+        "file": "src/app/page/bulletin/bulletin.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/page/bulletin/bulletin.page.spec.ts",
+        "hash": "11940082372894099532"
+      },
+      {
+        "file": "src/app/page/bulletin/bulletin.page.ts",
+        "hash": "16757970811302432665"
+      },
+      {
+        "file": "src/app/page/home/home.page.html",
+        "hash": "7527689723738331575"
+      },
+      {
+        "file": "src/app/page/home/home.page.scss",
         "hash": "14250411118003398491"
       },
       {
-        "file": "src/app/home/home.page.spec.ts",
+        "file": "src/app/page/home/home.page.spec.ts",
         "hash": "17521930827652574693"
       },
       {
-        "file": "src/app/home/home.page.ts",
-        "hash": "8695204198416056090"
+        "file": "src/app/page/home/home.page.ts",
+        "hash": "6719335755999209393"
       },
       {
         "file": "src/assets/icon/favicon.png",
@@ -155,11 +242,11 @@
       },
       {
         "file": "src/global.scss",
-        "hash": "16777120732726033300"
+        "hash": "5542235403371910336"
       },
       {
         "file": "src/index.html",
-        "hash": "5962093970713772175"
+        "hash": "2443266924992373595"
       },
       {
         "file": "src/main.ts",
