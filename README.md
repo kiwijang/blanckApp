@@ -13,8 +13,7 @@
 
 ## 瀏覽器 ng serve
 
-Uploading 公告 App - Google Chrome 2024-01-17 21-30-09.mp4…
-
+https://github.com/kiwijang/blanckApp/assets/21300139/a8a2ca1d-4653-4985-8723-a488c1b839ea
 
 ## Android Studio run
 
