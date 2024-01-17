@@ -1,4 +1,8 @@
 # ionic blankApp
+## Mac 使用者注意!!
+
+要刪掉 `package-lock.json` 再 `npm i`
+
 
 ## 打開 android
 
