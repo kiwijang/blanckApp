@@ -1,0 +1,7 @@
+{
+  "name": "blanckApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
