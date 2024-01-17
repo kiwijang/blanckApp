@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="cancel()">取消</ion-button>
+    </ion-buttons>
+    <ion-title>圖片</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()" [strong]="true">確認</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-img [src]="picSrc" [alt]="picAlt"></ion-img>
+
+  <ion-item>
+    <ion-input
+      labelPlacement="stacked"
+      label="輸入文字顯示於主頁"
+      [(ngModel)]="name"
+      placeholder="你的名字"
+    ></ion-input>
+  </ion-item>
+</ion-content>

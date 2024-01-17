@@ -1,0 +1,68 @@
+<ion-content>
+  <ion-list *ngIf="loaded">
+    <ion-list-header>公佈欄列表</ion-list-header>
+
+    <ng-container *ngFor="let item of loadedItems">
+      <ion-nav-link
+        router-direction="forward"
+        [component]="bulletinDetailComp"
+        [componentProps]="{item: item}"
+      >
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="ionicon"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="currentColor"
+                d="M456 48H56a24 24 0 00-24 24v288a24 24 0 0024 24h72v80l117.74-80H456a24 24 0 0024-24V72a24 24 0 00-24-24zM160 248a32 32 0 1132-32 32 32 0 01-32 32zm96 0a32 32 0 1132-32 32 32 0 01-32 32zm96 0a32 32 0 1132-32 32 32 0 01-32 32zM456 80z"
+              />
+            </svg>
+          </ion-thumbnail>
+          <ion-label>
+            <h3>{{item.title}}</h3>
+            <p>新增時間: {{item.createdAt | date: 'M/d/y, h:mm a'}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-nav-link>
+    </ng-container>
+  </ion-list>
+
+  <ion-grid
+    class="ion-justify-content-center d-flex ion-padding"
+    *ngIf="showButton"
+  >
+    <ion-button (click)="loadMoreData($event)">載入更多</ion-button>
+  </ion-grid>
+
+  <ion-infinite-scroll
+    (ionInfinite)="loadMoreData($event)"
+    loadingSpinner="bubbles"
+  >
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  <ion-list *ngIf="!loaded">
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text
+            [animated]="true"
+            style="width: 80%;"
+          ></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text
+            [animated]="true"
+            style="width: 60%;"
+          ></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
