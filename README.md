@@ -3,6 +3,10 @@
 
 要刪掉 `package-lock.json` 再 `npm i`
 
+```
+rm package-lock.json
+```
+
 
 ## 打開 android
 
