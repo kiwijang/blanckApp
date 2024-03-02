@@ -5,11 +5,12 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "lint": "ng lint"
+    "start": "nx serve",
+    "build": "nx build",
+    "watch": "nx build --watch --configuration development",
+    "test": "nx test",
+    "lint": "nx lint",
+    "deploy": "npm run build && firebase deploy"
   },
   "private": true,
   "dependencies": {
@@ -17,6 +18,7 @@
     "@angular/common": "^17.0.2",
     "@angular/compiler": "^17.0.2",
     "@angular/core": "^17.0.2",
+    "@angular/fire": "^17.0.1",
     "@angular/forms": "^17.0.2",
     "@angular/platform-browser": "^17.0.2",
     "@angular/platform-browser-dynamic": "^17.0.2",
@@ -37,6 +39,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.0",
+    "@angular-devkit/core": "^17.0.0",
+    "@angular-devkit/schematics": "^17.0.0",
     "@angular-eslint/builder": "^17.0.0",
     "@angular-eslint/eslint-plugin": "^17.0.0",
     "@angular-eslint/eslint-plugin-template": "^17.0.0",
@@ -47,6 +51,9 @@
     "@angular/language-service": "^17.0.2",
     "@capacitor/cli": "^5.6.0",
     "@ionic/angular-toolkit": "^9.0.0",
+    "@nx/angular": "17.2.8",
+    "@nx/workspace": "17.2.8",
+    "@schematics/angular": "^17.0.0",
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
@@ -61,8 +68,13 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "nx": "18.0.5",
     "ts-node": "^8.3.0",
-    "typescript": "~5.2.2"
+    "typescript": "~5.2.2",
+    "@nx/eslint": "18.0.5"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "nx": {
+    "includedScripts": []
+  }
 }

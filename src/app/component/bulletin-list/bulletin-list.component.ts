@@ -1,9 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectorRef,
-  Component,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {
   IonList,
@@ -27,6 +23,7 @@ import {
 } from '@ionic/angular/standalone';
 import { BulletinDetailComponent } from '../bulletin-detail/bulletin-detail.component';
 import { BulletinItem } from '../data';
+import { AnnouncementService } from 'src/app/service/announcement.service';
 
 @Component({
   selector: 'app-bulletin-list',
@@ -54,43 +51,35 @@ import { BulletinItem } from '../data';
     CommonModule,
     FormsModule,
   ],
+  providers: [AnnouncementService],
 })
 export class BulletinListComponent implements OnInit {
   bulletinDetailComp = BulletinDetailComponent;
   loaded = true;
   showButton = false;
 
-  readonly allData: BulletinItem[] = [
-    { title: '公告標題 01', createdAt: 1703496488777, content: '公告01的內文' },
-    { title: '公告標題 02', createdAt: 1703496488777, content: '公告02的內文' },
-    { title: '公告標題 03', createdAt: 1703496488777, content: '公告03的內文' },
-    { title: '公告標題 04', createdAt: 1703496488777, content: '公告04的內文' },
-    { title: '公告標題 05', createdAt: 1703496488777, content: '公告05的內文' },
-    { title: '公告標題 06', createdAt: 1703496488777, content: null },
-    { title: '公告標題 07', createdAt: 1703496488777, content: null },
-    { title: '公告標題 08', createdAt: 1703496488777, content: null },
-    { title: '公告標題 09', createdAt: 1703496488777, content: null },
-    { title: '公告標題 10', createdAt: 1703496488777, content: null },
-    { title: '公告標題 11', createdAt: 1703496488777, content: '公告01的內文' },
-    { title: '公告標題 12', createdAt: 1703496488777, content: '公告02的內文' },
-    { title: '公告標題 13', createdAt: 1703496488777, content: '公告03的內文' },
-    { title: '公告標題 14', createdAt: 1703496488777, content: '公告04的內文' },
-    { title: '公告標題 15', createdAt: 1703496488777, content: '公告05的內文' },
-    { title: '公告標題 16', createdAt: 1703496488777, content: null },
-    { title: '公告標題 17', createdAt: 1703496488777, content: null },
-    { title: '公告標題 18', createdAt: 1703496488777, content: null },
-    { title: '公告標題 19', createdAt: 1703496488777, content: null },
-    { title: '公告標題 20', createdAt: 1703496488777, content: null },
-  ];
+  allData: BulletinItem[] = [];
   datas: BulletinItem[] = [];
   loadedItems: BulletinItem[] = [];
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(
+    private cdr: ChangeDetectorRef,
+    private announcementService: AnnouncementService
+  ) {}
 
   ngOnInit() {
-    // 使用 sort 方法對 data 進行排序
-    this.datas = [...this.allData].sort((a, b) => b.createdAt - a.createdAt);
-    this._renderData();
+    this.announcementService.getAnnouncement().subscribe((res) => {
+      this.allData = res.map((x: any) => {
+        return {
+          title: x.password,
+          content: x.password,
+          createdAt: x.currentNumber,
+        };
+      });
+      // 使用 sort 方法對 data 進行排序
+      this.datas = [...this.allData].sort((a, b) => b.createdAt - a.createdAt);
+      this._renderData();
+    });
   }
 
   /**

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kira-6c6c9": {
+      "hosting": {
+        "app": [
+          "kira-6c6c9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kira-6c6c9"
+  }
+}

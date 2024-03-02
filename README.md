@@ -8,6 +8,16 @@ rm package-lock.json
 ```
 
 
+## 啟動專案
+
+`npm run start`
+
+會跑在 `http://localhost:4200`
+
+## java api 專案預設
+
+`http://localhost:8080`
+
 ## 打開 android
 
 `npx cap open android`
@@ -17,7 +27,6 @@ rm package-lock.json
 ## 打開 ios
 
 `npx cap open ios`
-
 
 ## 瀏覽器 ng serve
 
